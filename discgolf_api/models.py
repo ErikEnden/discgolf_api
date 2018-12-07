@@ -2,22 +2,22 @@ from django.db import models
 
 # Create your models here.
 
-class Course:
+class Course(models.Model):
     num_holes = models.PositiveSmallIntegerField()
     par = models.PositiveSmallIntegerField()
-class Hole:
+class Hole(models.Model):
     hole_num = models.PositiveSmallIntegerField()
     distance = models.PositiveSmallIntegerField()
-class Round:
+class Round(models.Model):
     course_id = models.PositiveIntegerField()
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
-class Player:
+class Player(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
-class Score:
+class Score(models.Model):
     round_id = models.PositiveIntegerField()
     hole_id = models.PositiveIntegerField()
     player_id = models.PositiveIntegerField()

@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
-    'discgolf_api'
+    'rest_framework',
+    'discgolf_api.apps.DiscgolfApiConfig',
 ]
 
 MIDDLEWARE = [
