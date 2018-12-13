@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Course(models.Model):
+    name = models.CharField(max_length=250)
     num_holes = models.PositiveSmallIntegerField()
     par = models.PositiveSmallIntegerField()
 class Hole(models.Model):

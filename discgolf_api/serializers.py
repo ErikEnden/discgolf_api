@@ -6,6 +6,7 @@ class CourseSerializer(serializers.ModelSerializer):
         model = Course
         fields = [
             'id',
+            'name',
             'num_holes',
             'par'
         ]
