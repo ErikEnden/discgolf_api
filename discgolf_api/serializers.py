@@ -16,7 +16,8 @@ class HoleSerializer(serializers.ModelSerializer):
         fields = [
             'id',
             'hole_num',
-            'distance'
+            'par',
+            'course_id'
         ]
 class RoundSerializer(serializers.ModelSerializer):
     class Meta:

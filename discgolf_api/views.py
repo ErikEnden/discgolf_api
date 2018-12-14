@@ -20,11 +20,20 @@ class CourseById(generics.RetrieveUpdateAPIView):
 
 class HoleList(generics.ListCreateAPIView):
     queryset = Hole.objects.all()
+    queryset = queryset.order_by('course_id', 'hole_num')
     serializer_class = HoleSerializer
 
 class HoleById(generics.RetrieveUpdateAPIView):
     queryset = Hole.objects.all()
     serializer_class = HoleSerializer
+
+class HolesByCourse(generics.ListCreateAPIView):
+    queryset = Hole.objects.all()
+    serializer_class = HoleSerializer
+    def get_queryset(self):
+        id = self.kwargs['id']
+        return Hole.objects.filter(course_id=id).order_by('hole_num')
+    
 
 class RoundList(generics.ListCreateAPIView):
     queryset = Round.objects.all()

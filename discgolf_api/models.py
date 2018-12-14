@@ -7,8 +7,9 @@ class Course(models.Model):
     num_holes = models.PositiveSmallIntegerField()
     par = models.PositiveSmallIntegerField()
 class Hole(models.Model):
+    course_id = models.PositiveIntegerField()
     hole_num = models.PositiveSmallIntegerField()
-    distance = models.PositiveSmallIntegerField()
+    par = models.PositiveSmallIntegerField()
 class Round(models.Model):
     course_id = models.PositiveIntegerField()
     start_time = models.DateTimeField()

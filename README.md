@@ -9,8 +9,9 @@
 
 ##### Kasutamine
 
-1. Klooni repo
-2. Testserveri käivitamiseks olles command prompti/terminaliga projekti juurkaustas lokaalselt:
+1. Installi vajalik vahevara: django, django-cors-headers, djangorestframework
+2. Klooni repo
+3. Testserveri käivitamiseks olles command prompti/terminaliga projekti juurkaustas lokaalselt:
 
 ```
 python3 manage.py runserver
